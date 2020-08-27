@@ -32,12 +32,6 @@ To list all the tables in the database:
 .tables
 ```
 
-To inspect the schema for the `pizzas` table:
-
-```
-.schema pizzas
-```
-
 For more help with sqlite commands, run:
 
 ```
@@ -49,14 +43,6 @@ From here you can start running queries on the database:
 ```
 SELECT * FROM pizzas LIMIT 5;
 ```
-
-When you are finished:
-
-```
-.quit
-```
-
-(or ctrl-d) to exit.
 
 ### Getting the Data Into Pandas
 

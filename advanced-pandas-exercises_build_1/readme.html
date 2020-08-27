@@ -129,23 +129,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 .mode column</code></pre>
 <p>To list all the tables in the database:</p>
 <pre><code>.tables</code></pre>
-<p>To inspect the schema for the <code>pizzas</code> table:</p>
-<pre><code>.schema pizzas</code></pre>
 <p>For more help with sqlite commands, run:</p>
 <pre><code>.help</code></pre>
 <p>From here you can start running queries on the database:</p>
 <pre><code>SELECT * FROM pizzas LIMIT 5;</code></pre>
-<p>When you are finished:</p>
-<pre><code>.quit</code></pre>
-<p>(or ctrl-d) to exit.</p>
 <h3 id="getting-the-data-into-pandas">Getting the Data Into Pandas</h3>
 <p>The <code>sqlite3</code> module is part of the python standard library, so you shouldn’t need to install anything.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="im">import</span> pandas <span class="im">as</span> pd</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="im">import</span> sqlite3</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">connection <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">&#39;pizza.sqlite&#39;</span>) <span class="co"># or specify the path to the db file</span></a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6">pizzas <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM pizzas&#39;</span>, connection)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="im">import</span> pandas <span class="im">as</span> pd</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="im">import</span> sqlite3</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">connection <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">&#39;pizza.sqlite&#39;</span>) <span class="co"># or specify the path to the db file</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">pizzas <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM pizzas&#39;</span>, connection)</a></code></pre></div>
 <h2 id="questions">Questions</h2>
 <ul>
 <li>What information is stored in the <code>toppings</code> table? How does this table relate to the <code>pizzas</code> table?</li>
